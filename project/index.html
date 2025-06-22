@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="fevi.png" type=".png">
+<title>NextStep.AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1><i>NextStep.AI</i></h1>
+    <p>Discover. Decide. Do.</p>
+    <a href="#options"><button class="cta">Get Started</button></a>
+</header>
+<section id="tip-section">
+  <h2>💡 Tip of the Day</h2>
+  <p id="tip-text">Click the button below for a new tip about career, coding, or startups!</p>
+  <button id="newTipBtn" class="but">New Tip</button>
+</section>
+
+<section id="options" class="options">
+    <div class="card">
+        <h2>Explore</h2>
+        <p>Identify your career path based on your preferences.</p>
+        <a href="explore.html"><button onclick="goToPage('explore.html')">Explore</button></a>
+    </div>
+
+    <div class="card">
+        <h2>Prepare</h2>
+        <p>Create a tailored resume and roadmap to land your first job.</p>
+        <a href="prepare.html"><button onclick="goToPage('prepare.html')">Prepare</button></a>
+    </div>
+
+    <div class="card">
+        <h2>Launch</h2>
+        <p>Launch your venture or freelance career with ease.</p>
+        <a href="launch.html"><button onclick="goToPage('launch.html')">Launch</button></a>
+    </div>
+</section>
+
+<footer>
+    <p>&copy;<i> 2025 NextStep.AI. All Rights Reserved.</i></p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  const tips = [
+    "Tip: Network with people in your field!",
+    "Tip: Keep improving your portfolio!",
+    "Tip: Learn a new coding framework each 6 months!",
+    "Tip: Set clear goals and timelines!",
+    "Tip: Take small steps; progress adds up!",
+    "Tip: Develop a growth mindset!",
+    "Tip: Your skills are your greatest asset!",
+    "Tip: Ask for feedback and learn from it!",
+    "Tip: Soft skills matter just as much as technical skills!",
+    "Tip: Keep your LinkedIn and Git updated!"
+  ];
+
+  document.getElementById('newTipBtn').addEventListener('click', () => {
+    const tip = tips[Math.floor(Math.random() * tips.length)];
+
+    document.getElementById('tip-text').innerText = tip;
+  });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="fevi.png" type=".png">
+<title>Prepare</title>
+<link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+<h1>Prepare Section</h1>
+
+<img src="https://cdn-icons-png.flaticon.com/512/3139/3139435.png" alt="prepare icon" class="icon">
+
+<section>
+    <p>Here you can create your resume, learn skills, and prepare for your future path.</p>
+    <ul class="tips">
+        <li>➥ Prepare a tailored resume</li>
+        <li>➥ Access a personalized roadmap</li>
+        <li>➥ Develop skills through curated resources</li>
+    </ul>
+</section>
+<a href="index.html"><button class="but">Back to Home</button></a>
+<h2>Create Your Resume</h2>
+
+<section id="prepare-form">
+    <input id="name" placeholder="Your name">
+    <input id="degree" placeholder="Your degree">
+    <input id="strengths" placeholder="Your key strengths (comma-separated)">  
+
+    <br>
+    <button id="prepareBtn" class="but">Create Resume</button>
+</section>
+
+<section id="prepare-result" style="margin-top:30px">
+    <h2>Your Resume</h2>
+    <div id="generatedResume" class="card"></div>
+
+    <br>
+    <button id="preparePdfBtn" class="but">Download Resume as PDF</button>
+</section><!-- ROADMAP Section -->
+<h2>Access a Personalized Roadmap</h2>
+<section class="card">
+    <label for="careerSelect">Choose your career goal:</label>
+    <select id="careerSelect">
+        <option value="">-- Select Career --</option>
+        <option value="developer">Web Developer</option>
+        <option value="designer">UI/UX Designer</option>
+        <option value="data">Data Analyst</option>
+    </select>
+    <div id="roadmapOutput" style="margin-top: 20px;"></div>
+</section>
+
+<!-- RESOURCES Section -->
+<h2>Develop Skills Through Curated Resources</h2>
+<section class="card">
+    <label for="skillSelect">Pick a skill:</label>
+    <select id="skillSelect">
+        <option value="">-- Select Skill --</option>
+        <option value="htmlcss">HTML & CSS</option>
+        <option value="js">JavaScript</option>
+        <option value="python">Python</option>
+    </select>
+    <ul id="resourceLinks" class="tips" style="margin-top: 15px;"></ul>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/html2pdf.js"></script>
+<script src="prepare.js"></script>
+
+
+</body>
+</html>

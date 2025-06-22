@@ -1,0 +1,475 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #333;
+    background: linear-gradient(135deg, #edf2f7, #cfd9ef);
+    scroll-behavior: smooth;
+    transition: all 0.5s ease;
+    padding: 20px;
+}
+
+/* Sections */
+section {
+    background: #ffffffcc;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px #0003;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { transform: translateY(20px); opacity: 0 }
+    to { transform: translateY(0); opacity: 1 }
+}
+
+/* Icons */
+img.icon {
+    display: block;
+    margin: 20px auto;
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease;
+}
+
+img.icon:hover {
+    transform: scale(1.1);
+}
+
+/* Tips List */
+ul.tips {
+    margin-bottom: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+ul.tips li {
+    background: #edf5ff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px #0003;
+    transition: transform 0.3s ease;
+}
+
+ul.tips li:hover {
+    transform: translateX(10px);
+    background: #d9edf9;
+}
+
+/* Prepare Form Styling */
+#prepare-form {
+    margin: 50px 20px;
+    padding: 30px;
+    background: #ffffffcc;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px #0003;
+    text-align: center;
+}
+
+#prepare-form input {
+    display: block;
+    margin: 15px auto;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    width: 60%;
+}
+
+/* Card List */
+ul.card {
+    list-style: none;
+    padding: 20px;
+}
+
+ul.card li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* General Card Styling */
+.card {
+    background: #ffffffcc;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px #0003;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px #0005;
+}
+
+/* Launch Form Styling */
+form {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px #0005;
+    margin: 40px auto 30px;
+    max-width: 500px;
+    transition: all 0.3s ease;
+}
+
+form input,
+form textarea,
+form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 15px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px #0005;
+    background: #ffffffcc;
+    color: #000;
+}
+
+form input:focus,
+form textarea:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px #0009;
+    background: #ffffff;
+}
+
+form button {
+    background: #469bc9;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 0;
+    padding: 15px 30px;
+    box-shadow: 0 4px 15px #3bc1f280;
+}
+
+form button:hover {
+    background: #2dced6;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px #00000080;
+}
+
+/* Button (Outside Form) */
+.but {
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 15px 30px;
+    background: #2bb8eb;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px #ff6f6180;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.but:hover {
+    background: #21c3f0;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px #31d7ea80;
+}
+
+/* Quiz Questions */
+.question {
+    border: none;
+    box-shadow: none;
+}
+
+.question label {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    padding: 12px 18px;
+    background: #ffe5ef;
+    border-radius: 20px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    font-size: 1.05rem;
+    color: #ff5ca1;
+    box-shadow: none;
+    border: none;
+    z-index: 1;
+}
+
+.question label:hover {
+    background: #ffccde;
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px #ffb3ca;
+}
+
+.question input[type="radio"] {
+    margin-right: 15px;
+    transform: scale(1.4);
+    accent-color: #ff5ca1;
+    position: relative;
+    z-index: 2;
+}
+
+/* Card Options */
+.options .card {
+    background: #edf7ff;
+    padding: 30px 20px;
+    border-radius: 25px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 6px 20px #cce9ff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #91d5ff;
+    color: #007acc;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.options .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(135deg, #91d5ff, #edf7ff);
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+    z-index: -1;
+}
+
+.options .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px #91d5ff;
+    color: #ffffff;
+}
+
+.options .card:hover::before {
+    transform: translateY(0);
+}
+
+.options .card h2 {
+    margin-bottom: 15px;
+    font-size: 1.7rem;
+    color: #007acc;
+    transition: color 0.3s ease;
+}
+
+.options .card p {
+    margin-bottom: 20px;
+    color: #005b9e;
+    transition: color 0.3s ease;
+}
+
+.options .card button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #007acc;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 15px #91d5ff;
+}
+
+.options .card button:hover {
+    background: #005b9e;
+    box-shadow: 0 6px 20px #91d5ff;
+}
+
+/* Hide extra HRs if present */
+hr {
+    display: none;
+}
+.question input[type="radio"] {
+  display: none;
+}
+
+.question label {
+  position: relative;
+  padding-left: 45px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Custom Circle */
+.question label::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 3px solid #ff5ca1;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+/* Selected Inner Dot */
+.question input[type="radio"]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 12px; /* fine-tuned for visual centering */
+  height: 19px;
+  width: 19px;
+  border-radius: 50%;
+  background-color: #ff5ca1;
+}
+
+
+/* Reset scale in case it's still applied elsewhere */
+.question input[type="radio"] {
+  transform: none !important;
+}
+/* Select Dropdown Styling */
+select {
+    width: 60%;
+    padding: 12px 20px;
+    margin-top: 10px;
+    font-size: 1rem;
+    border-radius: 15px;
+    border: 2px solid #91d5ff;
+    background-color: #ffffffcc;
+    color: #007acc;
+    box-shadow: 0 4px 10px #91d5ff40;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+select:focus {
+    border-color: #2bb8eb;
+    box-shadow: 0 6px 15px #2bb8eb60;
+}
+
+/* Resource Link List */
+#resourceLinks li {
+    background: #f0faff;
+    margin-bottom: 12px;
+    padding: 12px 18px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px #00000030;
+    transition: background 0.3s ease;
+}
+
+#resourceLinks li:hover {
+    background: #d6efff;
+    transform: translateX(5px);
+}
+
+/* Resource link anchor styling */
+#resourceLinks a {
+    color: #007acc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#resourceLinks a:hover {
+    text-decoration: underline;
+}
+/* Toggle Button for Portfolio */
+.portfolio-toggle {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 18px 30px;
+    background: #3498db;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s ease;
+}
+
+.portfolio-toggle:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Portfolio Input Section */
+#portfolioSection input,
+#portfolioSection textarea {
+    width: 96%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    box-shadow: 0 2px 6px #0002;
+    background: #f9f9f9;
+    color: #333;
+}
+
+#portfolioSection textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Portfolio Output Box */
+#portfolioOutput {
+    background: #fefefe;
+    border-left: 5px solid #3498db;
+    padding: 20px 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #0002;
+    margin-top: 20px;
+    color: #2c3e50;
+}
+.idea-generator {
+    margin-top: 40px;
+}
+
+.idea-generator h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.idea-input-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+}
+
+.idea-input-group input[type="text"] {
+    flex: 1;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px #ccc;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.idea-input-group input[type="text"]:focus {
+    border-color: #2bb8eb;
+    box-shadow: 0 4px 15px #2bb8eb80;
+}
+
+.idea-input-group button {
+    padding: 15px 25px;
+    background: #2bb8eb;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 15px;
+    border: 2px solid #0004;
+    box-shadow: 0 4px 10px #ff6f6180;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.idea-input-group button:hover {
+    background: #21c3f0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px #31d7ea80;
+}

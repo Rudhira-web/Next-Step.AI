@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="fevi.png" type=".png">
+  <title>Explore</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+  <h1>Explore Section</h1>
+
+  <img src="https://cdn-icons-png.flaticon.com/512/368/368220.png" alt="explore icon" class="icon">
+
+  <section>
+    <p>This is where you can discover career options based on your interests and skills.</p>
+    <ul class="tips">
+      <li>➥ Take the quiz to find your best match</li>
+      <li>➥ View salaries, future growth, and roles</li>
+      <li>➥ Get personalized suggestions</li>
+    </ul>
+  </section>
+
+  <a href="index.html"><button class="but">Back to Home</button></a>
+  <h1>Explore Your Future</h1>
+
+  <button id="interviewBtn" class="but">Take the Career Quiz</button>
+
+  <form id="quizForm" style="display: none;">
+    <h2>Career Preference Quiz</h2>
+
+    <div class="question">
+      <p>1️. Do you prefer working with:</p>
+      <input type="radio" name="q1" value="people" id="q1a">
+      <label for="q1a">People</label>
+      <input type="radio" name="q1" value="machines" id="q1b">
+      <label for="q1b">Machines</label>
+      <input type="radio" name="q1" value="nature" id="q1c">
+      <label for="q1c">Nature</label>
+    </div>
+
+    <div class="question">
+      <p>2️. Your style is more:</p>
+      <input type="radio" name="q2" value="creative" id="q2a">
+      <label for="q2a">Creative</label>
+      <input type="radio" name="q2" value="analytical" id="q2b">
+      <label for="q2b">Analytical</label>
+      <input type="radio" name="q2" value="practical" id="q2c">
+      <label for="q2c">Practical</label>
+    </div>
+
+    <div class="question">
+      <p>3️. You prefer:</p>
+      <input type="radio" name="q3" value="solving" id="q3a">
+      <label for="q3a">Solving challenges</label>
+      <input type="radio" name="q3" value="helping" id="q3b">
+      <label for="q3b">Helping others</label>
+      <input type="radio" name="q3" value="organizing" id="q3c">
+      <label for="q3c">Organizing work</label>
+    </div>
+
+    <div class="question">
+      <p>4️. Which excites you most?</p>
+      <input type="radio" name="q4" value="tech" id="q4a">
+      <label for="q4a">Technology</label>
+      <input type="radio" name="q4" value="business" id="q4b">
+      <label for="q4b">Business</label>
+      <input type="radio" name="q4" value="art" id="q4c">
+      <label for="q4c">Arts</label>
+      <input type="radio" name="q4" value="science" id="q4d">
+      <label for="q4d">Science</label>
+    </div>
+
+    <div class="question">
+      <p>5️. Do you prefer:</p>
+      <input type="radio" name="q5" value="leading" id="q5a">
+      <label for="q5a">Leading teams</label>
+      <input type="radio" name="q5" value="independent" id="q5b">
+      <label for="q5b">Working independently</label>
+      <input type="radio" name="q5" value="supporting" id="q5c">
+      <label for="q5c">Supporting roles</label>
+    </div>
+
+    <button type="submit" class="but">Show My Career Path</button>
+  </form>
+
+  <h2 id="result" style="margin-bottom: 30px; color:#ff6f61;"></h2>
+
+  <script>
+    // Simple JS to toggle form visibility
+    document.getElementById("interviewBtn").addEventListener("click", function () {
+      document.getElementById("quizForm").style.display = "block";
+    });
+  </script>
+  <script src="explore.js"></script>
+
+</body>
+</html>

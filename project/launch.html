@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="fevi.png" type="image/png">
+  <title>Launch | NextStep.AI</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+<header>
+  <h1>Launch Your Future</h1>
+  <img src="https://cdn-icons-png.flaticon.com/512/1881/1881459.png" alt="Launch Icon" class="icon">
+</header>
+
+<section class="intro">
+  <p>Turn your ideas into reality — whether it's building your startup, portfolio, or personal brand. Let’s make it happen together!</p>
+  <ul class="tips">
+    <li>➤ Develop your portfolio and showcase your skills</li>
+    <li>➤ Get tailored business ideas based on your passions</li>
+    <li>➤ Access resources for branding, pricing, and clients</li>
+    <li>➤ Prepare your pitch and launch your future today</li>
+  </ul>
+  <div class="button-group">
+    <a href="index.html" class="but">⟵ Back to Home</a>
+  </div>
+</section>
+
+<section class="feature-block">
+  <h2>Develop Your Portfolio</h2>
+  <button class="portfolio-toggle" onclick="togglePortfolio()">Click to Build Portfolio</button>
+  <div id="portfolioSection" style="display: none;">
+    <form id="portfolioForm">
+      <input id="portfolioName" placeholder="Your Name" required>
+      <input id="portfolioSkills" placeholder="Skills (comma-separated)" required>
+      <textarea id="portfolioProjects" placeholder="Describe your past projects..." rows="4" required></textarea>
+      <button type="button" class="but" onclick="generatePortfolio()">Generate Portfolio</button>
+    </form>
+    <div id="portfolioOutput" class="card" style="display:none;"></div>
+  </div>
+</section>
+
+<section class="feature-block">
+  <h2>Tailored Business Idea Generator</h2>
+  <div class="idea-input-group">
+    <input type="text" id="passionInput" placeholder="Enter your passion (e.g., design, fitness)">
+    <button id="generateIdeaBtn" onclick="generateIdea()">Generate Idea</button>
+  </div>
+  <div id="ideaOutput" class="card" style="display: none;"></div>
+</section>
+
+<section class="feature-block">
+  <h2>🛠️ Launch Your Project</h2>
+  <form id="projectForm">
+    <input id="projectName" placeholder="Project Name" required>
+    <input id="colorScheme" type="color" required>
+    <textarea id="projectDesc" placeholder="Brief Description" required></textarea>
+    <input id="projectPhotos" type="file" multiple accept="image/*">
+    <button type="submit" class="but">Create My Project</button>
+  </form>
+  <div id="generatedPage"></div>
+</section>
+
+<script src="launch.js"></script>
+<script>
+function togglePortfolio() {
+  const section = document.getElementById("portfolioSection");
+  section.style.display = section.style.display === "none" ? "block" : "none";
+}
+
+function generatePortfolio() {
+  const name = document.getElementById("portfolioName").value;
+  const skills = document.getElementById("portfolioSkills").value;
+  const projects = document.getElementById("portfolioProjects").value;
+
+  const output = `
+    <h3>${name}</h3>
+    <p><strong>Skills:</strong> ${skills}</p>
+    <p><strong>Projects:</strong> ${projects}</p>
+    <p><em>This portfolio highlights key capabilities and accomplishments.</em></p>
+  `;
+  const resultDiv = document.getElementById("portfolioOutput");
+  resultDiv.innerHTML = output;
+  resultDiv.style.display = "block";
+}
+
+function generateIdea() {
+  const passion = document.getElementById("passionInput").value.trim().toLowerCase();
+  const ideas = {
+    "design": "Start a freelance branding studio for startups and local businesses.",
+    "coding": "Build a custom portfolio generator or SaaS tool for freelancers.",
+    "fitness": "Launch an online coaching platform for busy professionals.",
+    "cooking": "Create a home-chef subscription service or YouTube channel.",
+    "music": "Offer remote music production/mixing for indie artists.",
+    "teaching": "Build micro-courses or tutor through your own learning website."
+  };
+  const idea = ideas[passion] || `Start a personalized consulting or service brand around "${passion}".`;
+
+  const resultDiv = document.getElementById("ideaOutput");
+  resultDiv.innerHTML = `<strong>Business Idea:</strong> ${idea}`;
+  resultDiv.style.display = "block";
+}
+</script>
+
+</body>
+</html>
